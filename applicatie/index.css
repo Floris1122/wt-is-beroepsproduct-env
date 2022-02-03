@@ -1,0 +1,197 @@
+body{
+  font-family: 'Lucida Sans';
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  background-color: #141414;      
+}
+
+header{
+  background-color:#141414;
+}
+
+main{
+  width: 70vw;
+  flex-direction: column;
+  align-self: center;
+  background-color: #141414;      
+  padding-left: 3vh;
+  padding-top: 3vh;
+  padding-bottom: 3vh;  
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 10fr));
+  grid-gap: 1em;
+  background-color: #141414;  
+  padding-top: 3%;
+  padding-bottom: 3%;
+  border-radius: 25px;
+}
+
+.Video_Center{
+  display: block;
+  margin: auto;
+  width: 300px;
+  height: 200px;
+  border-radius: 25px;
+}
+
+a{
+  text-decoration: none;
+  color:red;
+  font-size: 32px;
+}
+
+.Text{
+  color: red;
+  background-color: #141414;
+}
+
+.TextCenter{
+  text-align: center;
+}
+
+p{
+  color: red;
+  text-align: center;
+}
+
+/* Tekst voor filmpagina center */
+.Text_center {
+  color: red;
+  text-align: center;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+/* StartScherm: */
+#box{
+  background-color: #202020;
+  border: 30px solid #202020;
+  border-radius: 50px;
+  padding: 50px;
+  margin: 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 10fr));
+  grid-gap: 1vh;
+  display: flex;
+}
+
+.Profile_aligning{
+  display: block;
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 50px;
+}
+
+.Text_White{
+  color: white;
+  font-weight: 900;
+  background-color: #202020;
+  text-align: center;
+  font-size: 40px;
+}
+
+.p_White{
+  color: white;
+}
+
+.p_Red {
+  color: red;
+}
+
+/* Filter Menu: */
+aside {
+  width: 15em;
+  padding-left: 10px;
+  margin-top: 15px;
+  margin-left: 20px; 
+  background-color: #141414;
+}
+
+/* Zoekbalk */
+form.searchBar input {
+  padding: 7px;
+  margin-top: 10px;
+  font-size: 17px;
+  border: 1px solid red;           
+  float: left;
+  width: 60%;
+}
+
+form.searchBar button {
+  float: left;
+  width: 19%;
+  padding: 17px;
+  margin-top: 11px;
+  background: red;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+form.searchBar button:hover {
+  background: darkred ;
+}
+
+/* Hover over films */
+div div:hover{
+  position:relative;
+  top: -2%;
+  bottom: +5px;
+  width: 105%;
+  height: 105%;
+  display: block;
+}
+
+/* Naviatiebalk */
+nav {
+  display: flex;
+  width: 100%;
+  height: max-content;
+  justify-content: space-around;
+  background-color: #212121;
+}
+
+/* Geld voor de eerste UL binnen de 'nav' */
+nav > ul{
+  display:flex;
+  flex-direction: row;
+}
+
+/* Geld voor alle UL binnen de 'nav' */
+nav ul {
+  margin: 0;
+  padding: 0;
+  width: max-content;
+}
+
+nav ul li {
+  position: relative;
+  display: flex;
+  color: orange;
+  transition: all 0.6s;
+  background-color: #212121;
+}
+
+nav ul li a{
+  color: red;
+  padding: 1rem;  
+}
+
+nav ul li:hover {
+  background-color: #141414;
+}
+
+nav ul>li>ul {
+  display: none;
+  top: 3rem;
+  position: absolute; 
+  background-color: #141414;
+}
+
+nav ul>li:hover>ul {
+  display: block;
+}
