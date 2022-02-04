@@ -31,8 +31,8 @@ function checkLogin(){
         $ingelogd = true;
     } return $ingelogd;
 }
-?>
 
+?>
 <!-- HTML -->
 
 <!DOCTYPE html>
@@ -61,6 +61,7 @@ function checkLogin(){
           </nav>
     
     <br>
+    <a>Tip: Inloggegevens zijn: floris - 1234</a><br><br><br><br>
     <?php    
         //
         if(checkLogin())
@@ -71,7 +72,6 @@ function checkLogin(){
         }
          
     ?>
-    <h5>Inloggegevens zijn: floris - 1234</h5><br><br><br><br>
 
 
 

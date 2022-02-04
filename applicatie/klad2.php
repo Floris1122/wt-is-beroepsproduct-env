@@ -15,7 +15,7 @@ if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['cmdLo
 
     if($username == "floris" && $password == "1234"){
         //combinatie klopt
-        echo"Je bent nu ingelogd, welkom op de website";
+        echo"Je bent nu ingelogd";
         $_SESSION['ingelogd'] = 1;
         $_SESSION['username'] = $username;
 
@@ -31,7 +31,15 @@ function checkLogin(){
         $ingelogd = true;
     } return $ingelogd;
 }
-?>
+        //
+        if(checkLogin())
+        {
+            echo '<a href="klad2.php?action=logout">Klik hier om uit te loggen</a>';
+        } else {
+            echo "Log in door je inloggegevens hierboven in te vullen";
+        }
+         
+    ?>
 
 <!-- HTML -->
 
@@ -54,44 +62,7 @@ function checkLogin(){
         </form>
     
     <br>
-    <?php    
-        //
-        if(checkLogin())
-        {
-            echo '<a href="klad2.php?action=logout">Klik hier om uit te loggen</a>';
-        } else {
-            echo "Log in door je inloggegevens hierboven in te vullen";
-        }
-         
-    ?>
-    <h5>Inloggegevens zijn: floris - 1234</h5><br><br><br><br>
-
-
-
-    <h3>nieuw testvlak:</h3>
-<table>
-    <tr>
-        <td>Username:</td>
-        <td><form action="klad2.php" method="POST">
-                <input type="text" name="gebruikersnaam" placeholder="gebruikersnaam">
-            </form>
-        </td>
-        <td>Password:</td>
-        <td><form action="klad2.php" method="POST">
-            <input type="password" name="wachtwoord" placeholder="wachtwoord">
-        </form>
-        </td>  
-        
-        <td>Submit: <form action="klad2.php" method="POST">
-            <input type="submit" name="verstuur " value="login">
-        </form></td>
-    </tr>
-</table>
-
-<?php
-   echo date("l jS \of F Y h:i:s A") . "<br>";
-?>
-
+    <h5>Inloggegevens zijn: floris - 1234</h5><br><br><br>
     </body>
 </html>
 
