@@ -23,11 +23,35 @@ while($rij = $data->fetch()) {
 }
 
 $genre_table = $genre_table . "</table>";
-
+?>
 // --------------------------------------------------------------------------------------------------------------
 
 
+
+
+
+
+
+<?php
+
 ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -41,6 +65,11 @@ $genre_table = $genre_table . "</table>";
       <?php 
       echo ($genre_table);
       
+//write query
+      $sql = 'SELECT title, price FROM movie;';
+
+
+
       ?>
   </body>
 </html>
