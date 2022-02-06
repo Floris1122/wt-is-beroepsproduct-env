@@ -15,7 +15,7 @@ if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['cmdLo
 
     if($username == "floris" && $password == "1234"){
         //combinatie klopt
-        echo"Je bent nu ingelogd, welkom op de website";
+        echo"Je bent nu ingelogd";
         $_SESSION['ingelogd'] = 1;
         $_SESSION['username'] = $username;
 
@@ -31,13 +31,12 @@ function checkLogin(){
         $ingelogd = true;
     } return $ingelogd;
 }
-
-?>
-<!-- HTML -->
+        //        
+    ?>
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,7 +45,6 @@ function checkLogin(){
         <title>Fletnix</title>
     </head>
     <body>
-
     <nav>
             <ul>
               <li><a href="index.php"><img src="img/fletnix.png" alt="fLeTnIx" width="75" height="30"></a></li>
@@ -58,38 +56,24 @@ function checkLogin(){
               <li><a href="contacts.php">Contact</a></li>
               <li><a href="AVG.php">AVG</a></li>
             </ul>
-          </nav>
+    </nav>  
+        <br><br>
+        <form action="inloggen.php" method="POST">
+            <input type="text" name="username" placeholder="Username">
+            <input type="password" name="password" placeholder="password">
+            <input type="submit" name="cmdLogin" value="login">
+        </form>
     
     <br>
-    <a>Tip: Inloggegevens zijn: floris - 1234</a><br><br><br><br>
-    <?php    
-        //
+    <p>Inloggegevens zijn: floris - 1234</p><br><br><br>
+    </body>
+    <?php
         if(checkLogin())
         {
             echo '<a href="inloggen.php?action=logout">Klik hier om uit te loggen</a>';
         } else {
             echo "Log in door je inloggegevens hierboven in te vullen";
-        }
-         
+        } 
     ?>
-
-
-
-    <main class="main">
-            <div class="Text_center"><h1>Inloggegevens</h1></div>
-                <div class="TextCenter">
-                    <form action="inloggen.php" method="POST">       
-                        <input type="text" name="username" id="username" placeholder="Username"><br><br>
-                        <input type="password" name="password" id="password" placeholder="Password"><br><br>
-                        <input type="submit" value="Submit">
-                    </form>
-                </div>
-        </main>        
-    </body>
 </html>
 
-
-
-
-
-  

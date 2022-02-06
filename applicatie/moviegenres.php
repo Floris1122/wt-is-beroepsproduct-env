@@ -10,6 +10,7 @@ $query = 'select G.genre_name as Genre, count(mg.movie_id) as Aantal
           group by G.genre_name
           order by G.genre_name';
 
+
 $data = $db->query($query);
 
 $genre_table = '<table>';
@@ -22,19 +23,24 @@ while($rij = $data->fetch()) {
 }
 
 $genre_table = $genre_table . "</table>";
+
+// --------------------------------------------------------------------------------------------------------------
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Movie genres</title>
-</head>
-<body>
-  <h1>Aantal films per genre want dat is belangrijk</h1>
-  <?php 
-  echo ($genre_table);
-  ?>
-</body>
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie genres</title>
+  </head>
+  <body>
+    <h1>Aantal films per genre want dat is belangrijk</h1>
+      <?php 
+      echo ($genre_table);
+      
+      ?>
+  </body>
 </html>
